@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="User" type="com.zhihu.bean.User"/>
+        <typeAlias alias="Company" type="com.zhihu.bean.Company"/>
+        <typeAlias alias="Resume" type="com.zhihu.bean.Resume"/>
+        <typeAlias alias="Student" type="com.zhihu.bean.Student"/>
+        <typeAlias alias="Record" type="com.zhihu.bean.Record"/>
+        <typeAlias alias="Allege" type="com.zhihu.bean.Allege"/>
+        <typeAlias alias="Collect" type="com.zhihu.bean.Collect"/>
+    </typeAliases>
+
+    <!-- 配置分页插件 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!-- 设置数据库类型-->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
+</configuration>
